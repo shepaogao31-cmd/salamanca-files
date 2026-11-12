@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#080706">
+<meta name="description" content="以沃尔特·怀特为中心的人物关系档案：杰西、斯凯勒、汉克、古斯、迈克、索尔、屠库、赫克托等 15 位关键人物与 27 条关系，附时间线。">
+<title>沃尔特·怀特人物关系档案 · THE HEISENBERG FILE</title>
+<link rel="icon" href="assets/fonts/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/network.css">
+</head>
+<body id="top">
+
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<header class="site-nav">
+  <a class="brand" href="#top" aria-label="回到顶部">
+    <span class="brand__mark">W/W</span>
+    <span class="brand__text"><strong>BREAKING BAD</strong><small>THE HEISENBERG FILE</small></span>
+  </a>
+  <nav class="site-nav__links" aria-label="主导航">
+    <a href="#network" data-i18n="navNetwork">关系网</a>
+    <a href="#timeline" data-i18n="navTimeline">时间线</a>
+    <a href="#about" data-i18n="navAbout">档案说明</a>
+  </nav>
+  <div class="nav__right">
+    <a class="nav__back" href="index.html" data-i18n="back">萨拉曼卡档案</a>
+    <a class="nav__back" href="saul.html" data-i18n="linkSaul">索尔关系网</a>
+    <div class="lang-switch" role="group" aria-label="语言切换 / Language">
+      <button type="button" data-lang-btn="zh" class="is-active" aria-pressed="true">中</button>
+      <span aria-hidden="true"></span>
+      <button type="button" data-lang-btn="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <span class="hero__ghost" aria-hidden="true">WALT</span>
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="kicker" data-i18n="heroKicker">档案编号 BB-2008 · 阿尔伯克基，新墨西哥</p>
+        <h1 class="hero__title">
+          WALTER<br>WHITE
+          <span class="hero__sub-cn" data-i18n="heroSubCn">人物关系档案</span>
+          <em class="hero__sub-en">THE HEISENBERG FILE</em>
+        </h1>
+        <p class="hero__lead" data-i18n="heroLead">一个名字，五段人生。从高中化学教师，到沙漠里的制毒师，再到把整个家拖进深渊的海森堡——他不是突然变坏的，他是一步步说服自己的。</p>
+
+        <div class="hero__meta">
+          <div><b>15</b><span data-i18n="heroMeta1">关键人物</span></div>
+          <div><b>27</b><span data-i18n="heroMeta2">条关系</span></div>
+          <div><b>05</b><span data-i18n="heroMeta3">年跨度</span></div>
+        </div>
+
+        <div class="hero__cta">
+          <a class="btn" href="#network">
+            <span data-i18n="heroCta">展开关系网</span>
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 13 13 3M6 3h7v7" stroke="currentColor" stroke-width="1.3"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="#timeline"><span data-i18n="heroCta2">阅读时间线</span></a>
+        </div>
+      </div>
+
+      <div class="stack" aria-hidden="true">
+        <div class="stack__card stack__card--back1"></div>
+        <div class="stack__card stack__card--back2"></div>
+        <div class="stack__card stack__card--main">
+          <p class="stack__label">CASE FILE · 2008—2013</p>
+          <span class="stack__stamp">H/F</span>
+          <p class="stack__big">WALTER</p>
+          <p class="stack__sub">WHITE</p>
+          <div class="stack__row">
+            <span>ALBUQUERQUE, NM</span>
+            <span>ABQ-0812</span>
+          </div>
+        </div>
+        <span class="stack__pin stack__pin--a"></span>
+        <span class="stack__pin stack__pin--b"></span>
+        <svg class="stack__thread" viewBox="0 0 400 440" fill="none">
+          <path d="M58 74 C 150 150, 250 96, 352 230" stroke="#a8402f" stroke-width="1.6" opacity="0.85"/>
+          <path d="M58 74 C 120 210, 300 250, 352 230" stroke="#a8402f" stroke-width="1.2" opacity="0.5"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- NETWORK -->
+  <section class="network" id="network">
+    <div class="wrap">
+      <div class="network__head">
+        <div class="section-head">
+          <p class="kicker" data-i18n="boardKicker">关系网 / THE NETWORK</p>
+          <h2 data-i18n="boardTitle">谁在定义沃尔特·怀特</h2>
+          <p data-i18n="boardLead">选中一张卡片，查看他与沃尔特之间的那条线；红色是爱，暗红是债，冷灰是法律。</p>
+        </div>
+      </div>
+
+      <div class="board-tools">
+        <span class="filter-label" data-i18n="filterLabel">按阵营筛选</span>
+        <div class="filter-chips" id="filter-chips"></div>
+        <div class="legend">
+          <span><i style="background:#b4513c"></i><em data-i18n="legendLove">亲密</em></span>
+          <span><i style="background:#b98a4b"></i><em data-i18n="legendFamily">血亲</em></span>
+          <span><i style="background:#6d838f"></i><em data-i18n="legendLaw">法律</em></span>
+          <span><i style="background:#8f7440"></i><em data-i18n="legendCrime">犯罪</em></span>
+          <span><i style="background:#9c3226"></i><em data-i18n="legendEnemy">敌对</em></span>
+          <span><i style="background:#5f6f78"></i><em data-i18n="legendEscape">消失</em></span>
+        </div>
+      </div>
+
+      <div class="board-frame">
+        <div class="board" id="board">
+          <svg id="network-board" viewBox="0 0 1200 780" role="img" aria-label="人物关系图">
+            <g id="layer-edges"></g>
+            <g id="layer-nodes"></g>
+          </svg>
+        </div>
+      </div>
+      <div class="index-strip" id="mobile-index">
+        <span class="index-strip__label">全部档案</span>
+        <div class="index-strip__chips"></div>
+      </div>
+      <div class="board-hint">
+        <span data-i18n="boardHint">悬停查看关系 · 点击打开档案</span>
+        <b class="scroll-tip">← 左右滑动查看完整关系图 →</b>
+        <b class="count-tip">15 FILES · 27 LINES</b>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="timeline" id="timeline">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker" data-i18n="timelineKicker">时间线 / THE ARC</p>
+        <h2 data-i18n="timelineTitle">五段人生，一个名字</h2>
+      </div>
+      <div class="timeline__track" id="timeline-track"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="wrap about__grid">
+      <div>
+        <p class="about__mark">SAY<br>MY<br>NAME<small>SAY MY NAME.</small></p>
+      </div>
+      <div class="about__body">
+        <p class="kicker" data-i18n="aboutKicker">档案说明 / COLOPHON</p>
+        <h2 class="section-head" style="font-size:clamp(24px,2.8vw,34px);margin:0 0 18px" data-i18n="aboutTitle">关于这份关系档案</h2>
+        <p data-i18n="aboutP1">这是一份非官方的粉丝创作，围绕《绝命毒师》中的沃尔特·怀特展开。人物、剧情与台词版权归 AMC / Sony Pictures Television 及创作者所有。</p>
+        <p data-i18n="aboutP2">关系图只收录与索尔有直接或关键间接联系的人物，线不代表全部剧情，只代表这段关系在他生命里的重量。</p>
+        <p data-i18n="aboutP3">“索尔·古德曼”来自 “S'all good, man.”——一句让所有人都放松警惕的玩笑。这份档案想记录的，正是这句玩笑的代价。</p>
+        <p class="about__credit">
+          <span data-author-label>作者 / AUTHOR</span>
+          <a data-author-link href="https://github.com/" target="_blank" rel="noopener noreferrer" data-author-name>@github</a>
+          <span class="about__sep" aria-hidden="true">/</span>
+          <span data-repo-label>源码 / SOURCE</span>
+          <a data-repo-link href="https://github.com/" target="_blank" rel="noopener noreferrer" data-repo-name>salamanca-files</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div class="site-footer__meta">
+      <span><strong>THE McGILL NETWORK</strong> · <span data-i18n="footer">非官方粉丝作品 · 与 AMC / Sony Pictures Television 无关</span></span>
+      <a class="site-credit" data-author-link href="https://github.com/" target="_blank" rel="noopener noreferrer">
+        <em data-author-label>作者 / AUTHOR</em>
+        <b data-author-name>@github</b>
+      </a>
+    </div>
+    <div class="site-footer__actions">
+      <button class="site-footer__gl" type="button" data-gl-diag>
+        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.8 14 5v6l-6 3.2L2 11V5l6-3.2Z" stroke="currentColor" stroke-width="1"/><path d="M8 5.4v4M8 10.9v.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        <span data-i18n="footer.glCheck">3D 诊断</span>
+      </button>
+      <a href="index.html">SALAMANCA FILES ↗</a>
+    </div>
+  </div>
+</footer>
+
+<div class="dossier" id="dossier" hidden>
+  <div class="dossier__veil" id="dossier-veil" data-close></div>
+  <section class="dossier__panel" role="dialog" aria-modal="true" aria-labelledby="dossier-name">
+    <button class="dossier__close" type="button" data-close aria-label="关闭档案" title="关闭 / Close">
+      <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 5l10 10M15 5 5 15" stroke="currentColor" stroke-width="1.4"/></svg>
+    </button>
+
+    <div class="dossier__stage">
+      <div class="stage__top">
+        <span class="stage__mode"><i></i><span id="stage-mode">LIVE 3D</span> · <span id="stage-num">01</span> / 15</span>
+        <span class="stage__status" id="stage-status">拖动旋转</span>
+      </div>
+
+      <div class="stage__canvas" id="stage-canvas">
+        <div class="stage__placeholder" id="stage-placeholder">
+          <span class="stage__spinner" aria-hidden="true"></span>
+          <span>正在载入 3D 人物…</span>
+        </div>
+        <div class="stage__photo" id="stage-photo" hidden>
+          <figure class="stage__frame">
+            <img id="stage-photo-img" alt="" decoding="async">
+            <span class="stage__frame-scan" aria-hidden="true"></span>
+            <figcaption><span id="stage-photo-cap">ON-SCREEN STILL</span><b>H/F</b></figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="stage__controls" id="stage-controls">
+        <button class="stage-btn is-on" id="btn-rotate" type="button" aria-pressed="true">
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8a5 5 0 1 1-1.5-3.6M13 2v3.5H9.5" stroke="currentColor" stroke-width="1.2"/></svg>
+          <span data-i18n="stage.auto">自动旋转</span>
+        </button>
+        <button class="stage-btn" id="btn-reset" type="button">
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8a5 5 0 1 0 1.5-3.6M3 2v3.5h3.5" stroke="currentColor" stroke-width="1.2"/></svg>
+          <span data-i18n="stage.reset">重置视角</span>
+        </button>
+      </div>
+
+      <p class="stage__hint" id="stage-hint">拖动旋转 · 滚轮 / 双指缩放</p>
+      <div class="stage__foot"><span id="stage-latin">SAUL GOODMAN</span><b>H/F · 0812</b></div>
+    </div>
+
+    <div class="dossier__info" id="dossier-info">
+      <header class="dossier__head">
+        <p class="dossier__tag" id="d-tag">档案</p>
+        <h2 id="dossier-name">—</h2>
+        <p class="dossier__alias" id="d-alias">—</p>
+        <div class="dossier__rel">
+          <span data-i18n="dossier.relation">与索尔的关系 / RELATION</span>
+          <strong id="d-relation">—</strong>
+        </div>
+      </header>
+
+      <dl class="dossier__meta">
+        <div><dt data-i18n="dossier.role">身份 / ROLE</dt><dd id="d-role">—</dd></div>
+        <div><dt data-i18n="dossier.faction">阵营 / FACTION</dt><dd id="d-faction">—</dd></div>
+        <div><dt data-i18n="dossier.season">活跃 / SEASONS</dt><dd id="d-season">—</dd></div>
+      </dl>
+
+      <div class="dossier__block">
+        <span class="block-label" data-i18n="dossier.traits">性格特征 / TRAITS</span>
+        <ul class="chip-list" id="d-traits"></ul>
+      </div>
+
+      <div class="dossier__block">
+        <span class="block-label" data-i18n="dossier.bio">档案正文 / FILE NOTE</span>
+        <p id="d-bio">—</p>
+      </div>
+
+      <section class="audio-card" id="audio-card" aria-label="台词音频">
+        <div class="audio-card__head">
+          <span id="audio-label">原话 / ON RECORD</span>
+          <em>AI 合成 · 非原声</em>
+        </div>
+        <p class="audio-card__quote" id="audio-quote">—</p>
+        <p class="audio-card__zh" id="audio-zh">—</p>
+        <div class="audio-player">
+          <button class="audio-btn" id="audio-btn" type="button" aria-label="播放台词">
+            <svg class="ico-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.5v9l7-4.5-7-4.5Z" fill="currentColor"/></svg>
+            <svg class="ico-pause" viewBox="0 0 16 16" aria-hidden="true"><rect x="4" y="3.5" width="2.6" height="9" fill="currentColor"/><rect x="9.4" y="3.5" width="2.6" height="9" fill="currentColor"/></svg>
+          </button>
+          <div class="audio-track" id="audio-track" role="slider" tabindex="0" aria-label="播放进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <span class="audio-track__fill" id="audio-fill"></span>
+            <span class="audio-track__knob" id="audio-knob"></span>
+          </div>
+          <span class="audio-time" id="audio-time">0:00 / 0:00</span>
+        </div>
+      </section>
+
+      <div class="dossier__block">
+        <span class="block-label" data-i18n="dossier.margin">档案批注 / MARGIN</span>
+        <p id="d-note">—</p>
+      </div>
+
+      <div class="dossier__block">
+        <span class="block-label" data-i18n="dossier.links">关系链 / CONNECTIONS</span>
+        <div class="dossier__chips" id="d-links"></div>
+      </div>
+
+      <div class="dossier__nav">
+        <button type="button" id="d-prev">← 上一位</button>
+        <span id="d-count">01 / 15</span>
+        <button type="button" id="d-next">下一位 →</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script src="assets/js/gl-support.js" defer></script>
+<script src="assets/js/three.min.js" defer></script>
+<script src="assets/js/GLTFLoader.js" defer></script>
+<script src="assets/js/saul-viewer.js" defer></script>
+<script src="assets/js/walter-data.js" defer></script>
+<script src="assets/js/saul.js" defer></script>
+<script src="assets/js/site-meta.js" defer></script>
+</body>
+</html>

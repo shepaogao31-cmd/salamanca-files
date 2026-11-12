@@ -1,8 +1,8 @@
 # Salamanca Files / The McGill Network
 
-两个互链的《风骚律师》/《绝命毒师》角色档案站点，纯静态、无构建步骤、离线可用。中英双语。
+三个互链的《风骚律师》/《绝命毒师》角色档案站点，纯静态、无构建步骤、离线可用。中英双语。
 
-Two interlinked character archives for *Better Call Saul* / *Breaking Bad*. Static, build-free, works offline. Bilingual (中文 / English).
+Three interlinked character archives for *Better Call Saul* / *Breaking Bad*. Static, build-free, works offline. Bilingual (中文 / English).
 
 ---
 
@@ -12,6 +12,7 @@ Two interlinked character archives for *Better Call Saul* / *Breaking Bad*. Stat
 
 - **[萨拉曼卡档案 · Salamanca Files ↗](https://shepaogao31-cmd.github.io/salamanca-files/)**
 - **[索尔关系网 · The McGill Network ↗](https://shepaogao31-cmd.github.io/salamanca-files/saul.html)**
+- **[毒师档案 · The Heisenberg File ↗](https://shepaogao31-cmd.github.io/salamanca-files/walter.html)**
 
 > 由 GitHub Pages 托管。若网络打不开，可下载本仓库后双击 `index.html` 本地打开，效果完全一致（3D 与音频都能离线运行）。
 
@@ -21,8 +22,9 @@ Two interlinked character archives for *Better Call Saul* / *Breaking Bad*. Stat
 | --- | --- | --- |
 | `index.html` | [打开 ↗](https://shepaogao31-cmd.github.io/salamanca-files/) | **Salamanca Files** — 萨拉曼卡家族六位角色：赫克托、屠库、拉罗、马可、莱昂内、萨拉曼卡奶奶。含家族关系图、3D 半身像、结局剧透折叠。 |
 | `saul.html` | [打开 ↗](https://shepaogao31-cmd.github.io/salamanca-files/saul.html) | **The McGill Network** — 以索尔为中心的人物关系网：15 位人物、27 条关系、阵营筛选、时间线、台词音频。 |
+| `walter.html` | [打开 ↗](https://shepaogao31-cmd.github.io/salamanca-files/walter.html) | **The Heisenberg File** — 以沃尔特·怀特为中心的人物关系网：15 位人物、27 条关系、5 段时间线、台词音频。 |
 
-两页导航互链，语言选择会记住。
+三页导航互链，语言选择会记住。
 
 ## 本地运行 / Run locally
 
@@ -52,7 +54,8 @@ python -m http.server 8000
     ├── js/models.js           # Three.js 查看器（萨拉曼卡）
     ├── js/saul.js             # 索尔：关系图、档案、音频
     ├── js/saul-viewer.js      # Three.js 查看器（索尔）
-    ├── js/saul-data.js        # 15 位人物与关系数据
+    ├── js/saul-data.js        # 索尔站：15 位人物与关系数据
+    ├── js/walter-data.js      # 毒师站：15 位人物与关系数据
     ├── js/gl-support.js       # WebGL 探测、降级与诊断
     ├── js/site-meta.js        # 作者署名与仓库链接
     ├── models/*.js            # 8 个 GLB 模型（base64）

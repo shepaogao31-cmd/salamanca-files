@@ -5,6 +5,7 @@
 window.SAUL_DATA = {
   meta: {
     title: { zh: "索尔·古德曼人物关系档案", en: "The Saul Goodman Relationship File" },
+    docTitle: { zh: "索尔·古德曼人物关系档案 · THE McGILL NETWORK", en: "Saul Goodman — The McGill Network" },
     years: "2002 — 2010",
     place: { zh: "阿尔伯克基 · 新墨西哥", en: "Albuquerque, New Mexico" }
   },
@@ -474,3 +475,5 @@ window.SAUL_DATA = {
     }
   ]
 };
+
+window.NETWORK_DATA = window.SAUL_DATA;

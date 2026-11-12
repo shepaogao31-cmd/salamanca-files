@@ -5,8 +5,10 @@
 (function () {
   "use strict";
 
-  var DATA = window.SAUL_DATA;
+  var DATA = window.NETWORK_DATA || window.SAUL_DATA;
   if (!DATA) return;
+  var CENTER = DATA.centerId || "saul";
+  var MEDIA_BASE = DATA.mediaBase || "assets/img/cast/";
 
   var state = {
     lang: "zh",
@@ -58,6 +60,8 @@
       footer: "非官方粉丝作品 · 与 AMC / Sony Pictures Television 无关",
       "footer.glCheck": "3D 诊断",
       back: "萨拉曼卡档案",
+      linkSaul: "索尔关系网",
+      linkWalter: "毒师档案",
       "stage.auto": "自动旋转",
       "stage.reset": "重置视角",
       "dossier.relation": "与索尔的关系 / RELATION",
@@ -112,6 +116,8 @@
       footer: "An unofficial fan project · not affiliated with AMC / Sony Pictures Television",
       "footer.glCheck": "3D check",
       back: "Salamanca files",
+      linkSaul: "Saul network",
+      linkWalter: "Breaking Bad file",
       "stage.auto": "AUTO ROTATE",
       "stage.reset": "RESET VIEW",
       "dossier.relation": "RELATION TO SAUL",
@@ -125,6 +131,14 @@
       all: "All"
     }
   };
+
+  /* 页面级文案可由数据文件覆盖，供不同档案复用同一套组件 */
+  if (DATA.copy) {
+    ["zh", "en"].forEach(function (l) {
+      if (!DATA.copy[l]) return;
+      Object.keys(DATA.copy[l]).forEach(function (k) { UI[l][k] = DATA.copy[l][k]; });
+    });
+  }
 
   function t(key) {
     return (UI[state.lang] && UI[state.lang][key]) || key;
@@ -167,7 +181,7 @@
   }
 
   function buildBoard() {
-    svg = document.getElementById("saul-board");
+    svg = document.getElementById("network-board");
     layerEdges = document.getElementById("layer-edges");
     layerNodes = document.getElementById("layer-nodes");
     if (!svg || !layerEdges || !layerNodes) return;
@@ -197,7 +211,7 @@
       var w = c.w || 168;
       var h = c.h || 60;
       var g = el("g", {
-        class: "node node--" + c.group + (c.id === "saul" ? " node--center" : ""),
+        class: "node node--" + c.group + (c.id === CENTER ? " node--center" : ""),
         transform: "translate(" + c.x + " " + c.y + ")",
         "data-id": c.id,
         tabindex: "0",
@@ -208,16 +222,16 @@
       g.appendChild(el("rect", { class: "node-card", x: -w / 2, y: -h / 2, width: w, height: h, rx: 6 }));
       g.appendChild(el("rect", { class: "node-rule", x: -w / 2 + 10, y: -h / 2 + 5, width: w - 20, height: 1 }));
 
-      var r = c.id === "saul" ? 21 : 16;
-      var cx = -w / 2 + (c.id === "saul" ? 34 : 28);
+      var r = c.id === CENTER ? 21 : 16;
+      var cx = -w / 2 + (c.id === CENTER ? 34 : 28);
       g.appendChild(el("circle", { class: "node-mark", cx: cx, cy: 0, r: r }));
       g.appendChild(el("text", { class: "node-initials", x: cx, y: 4, "text-anchor": "middle" }, c.initials));
 
       var tx = cx + r + 10;
-      g.appendChild(el("text", { class: "node-name", x: tx, y: c.id === "saul" ? -8 : -4 }, c.name[state.lang]));
-      g.appendChild(el("text", { class: "node-role", x: tx, y: c.id === "saul" ? 12 : 14 }, c.role[state.lang]));
+      g.appendChild(el("text", { class: "node-name", x: tx, y: c.id === CENTER ? -8 : -4 }, c.name[state.lang]));
+      g.appendChild(el("text", { class: "node-role", x: tx, y: c.id === CENTER ? 12 : 14 }, c.role[state.lang]));
 
-      if (c.id === "saul") {
+      if (c.id === CENTER) {
         g.appendChild(el("text", { class: "node-stamp", x: w / 2 - 12, y: -h / 2 + 18, "text-anchor": "end" }, "S/F"));
       }
 
@@ -540,7 +554,7 @@
     if (cv) cv.style.display = is3d ? "" : "none";
     if (photo) photo.hidden = is3d;
     if (img && !is3d) {
-      var src = "assets/img/cast/" + c.id + ".jpg";
+      var src = MEDIA_BASE + c.id + ".jpg";
       if (img.getAttribute("src") !== src) img.src = src;
       img.alt = (state.lang === "zh" ? "原剧影像：" : "On-screen still of ") + c.name[state.lang];
     }
@@ -566,7 +580,7 @@
     setText("#d-tag", c.tag[state.lang]);
     setText("#dossier-name", c.name[state.lang]);
     setText("#d-alias", c.alias[state.lang]);
-    setText("#d-relation", c.id === "saul"
+    setText("#d-relation", c.id === CENTER
       ? (state.lang === "zh" ? "档案中心 · 本人" : "THE SUBJECT")
       : c.relation[state.lang]);
     setText("#d-role", c.role[state.lang]);
@@ -691,9 +705,8 @@
     state.lang = lang;
     document.documentElement.setAttribute("data-lang", lang);
     document.documentElement.setAttribute("lang", lang === "zh" ? "zh-CN" : "en");
-    document.title = lang === "zh"
-      ? "索尔·古德曼人物关系档案 · THE McGILL NETWORK"
-      : "Saul Goodman — The McGill Network";
+    document.title = (DATA.meta && DATA.meta.docTitle && DATA.meta.docTitle[lang]) ||
+      (lang === "zh" ? "索尔·古德曼人物关系档案 · THE McGILL NETWORK" : "Saul Goodman — The McGill Network");
 
     document.querySelectorAll("[data-i18n]").forEach(function (n) {
       var key = n.getAttribute("data-i18n");
