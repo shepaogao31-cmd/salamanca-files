@@ -438,8 +438,8 @@ window.WALTER_DATA = {
       label: { zh: "诊断", en: "THE DIAGNOSIS" },
       title: { zh: "五十岁，肺癌三期", en: "Fifty, stage three" },
       text: {
-        zh: "他算了一笔账：教书三十年，留不下什么。于是他去找从前的学生，坐进一辆房车。",
-        en: "He did the arithmetic: thirty years of teaching would leave nothing behind. So he looked up an old student and got into an RV."
+        zh: "他算了一笔账：教书三十年，留不下什么。于是他去找从前的学生，坐进一辆房车，也给自己取了一个名字——海森堡。",
+        en: "He did the arithmetic: thirty years of teaching would leave nothing behind. So he looked up an old student, got into an RV — and gave himself a second name: Heisenberg."
       }
     },
     {
@@ -447,8 +447,8 @@ window.WALTER_DATA = {
       label: { zh: "搭档", en: "THE PARTNERSHIP" },
       title: { zh: "99.1% 的纯度", en: "99.1% pure" },
       text: {
-        zh: "蓝色晶体在沙漠里结晶。他第一次被叫作“海森堡”，第一次发现被人害怕的感觉很好。",
-        en: "Blue crystals in the desert. He was called Heisenberg for the first time, and discovered that being feared felt good."
+        zh: "蓝色晶体在沙漠里结晶。“海森堡”从一句自我介绍，变成了街头的一个名号。第一次有人因为这三个字发抖，他发现那种感觉很好。",
+        en: "Blue crystals in the desert. “Heisenberg” went from an introduction to a name on the street. The first time someone flinched at those three syllables, he found he liked it."
       }
     },
     {
@@ -456,8 +456,8 @@ window.WALTER_DATA = {
       label: { zh: "帝国", en: "THE EMPIRE" },
       title: { zh: "超级实验室", en: "The superlab" },
       text: {
-        zh: "古斯给了他一个地下实验室、一份薪水和一个身份。他得到了想要的一切，然后开始想要更多。",
-        en: "Gus gave him a lab under a laundry, a salary and a role. He got everything he wanted, then started wanting more."
+        zh: "古斯给了他一个地下实验室、一份薪水和一个身份。怀特先生每周照常上班，海森堡在地下和街头同时长大。他得到了想要的一切，然后开始想要更多。",
+        en: "Gus gave him a lab under a laundry, a salary and a role. Mr. White kept going to work; Heisenberg grew underground and on the street at once. He got everything he wanted, then started wanting more."
       }
     },
     {
@@ -465,8 +465,8 @@ window.WALTER_DATA = {
       label: { zh: "谎言", en: "THE LIE" },
       title: { zh: "家已经不像家", en: "The house stops being home" },
       text: {
-        zh: "斯凯勒学会了洗钱，汉克学会了怀疑，杰西学会了沉默。所有人都在替他保密，所有人都在付代价。",
-        en: "Skyler learned to launder, Hank learned to suspect, Jesse learned to say nothing. Everyone kept his secret; everyone paid for it."
+        zh: "斯凯勒学会了洗钱，汉克学会了怀疑，杰西学会了沉默。他对妻子说“我就是敲门的那个人”——那时怀特先生已经只剩下一个姓。",
+        en: "Skyler learned to launder, Hank learned to suspect, Jesse learned to say nothing. “I am the one who knocks,” he told his wife — by then Mr. White was only a surname."
       }
     },
     {
@@ -474,8 +474,8 @@ window.WALTER_DATA = {
       label: { zh: "崩塌", en: "THE COLLAPSE" },
       title: { zh: "我做这些，是因为我喜欢", en: "I did it for me" },
       text: {
-        zh: "沙漠、枪声、一个倒下的姐夫。他终于对妻子说了实话——不是为了家，是为了自己。",
-        en: "A desert, gunfire, a brother-in-law on the ground. He finally told his wife the truth: not for the family — for himself."
+        zh: "沙漠、枪声、一个倒下的姐夫。他终于对妻子说了实话——不是为了家，是为了自己。“记住我的名字。”五段人生走到这里，两个名字只剩下一个。",
+        en: "A desert, gunfire, a brother-in-law on the ground. He finally told his wife the truth: not for the family — for himself. “Say my name.” Five lives later, only one of the two names was left."
       }
     }
   ],
@@ -485,12 +485,13 @@ window.WALTER_DATA = {
       heroKicker: "档案编号 BB-2008 · 阿尔伯克基，新墨西哥",
       heroTitle: "沃尔特·怀特",
       heroSubCn: "人物关系档案",
-      heroLead: "一个名字，五段人生。从高中化学教师，到沙漠里的制毒师，再到把整个家拖进深渊的海森堡——他不是突然变坏的，他是一步步说服自己的。",
+      heroLead: "两个名字，五段人生。从高中化学教师，到沙漠里的制毒师，再到把整个家拖进深渊的海森堡——他不是突然变坏的，他是一步步说服自己的。",
       boardTitle: "谁在定义沃尔特·怀特",
       boardLead: "选中一张卡片，查看他与沃尔特之间的那条线：红色是爱，暗红是债，冷灰是法律。3D 档案可拖动旋转、滚轮或双指缩放；静态档案为原剧影像；每份档案都可播放台词。",
       legendEscape: "逃亡",
       relationLabel: "与沃尔特的关系",
-      timelineTitle: "五段人生，一个名字",
+      timelineTitle: "五段人生，两个名字",
+      timelineLead: "沃尔特·怀特是那个教书三十年、连热水器坏了都自己修的高中老师；海森堡是他给自己签发的第二张身份证。下面五段，是前者一点点让位给后者的过程。",
       aboutTitle: "关于这份关系档案",
       aboutP1: "这是一份非官方的粉丝创作，围绕《绝命毒师》中的沃尔特·怀特展开。人物、剧情与台词版权归 AMC / Sony Pictures Television 及创作者所有。",
       aboutP2: "关系图只收录与沃尔特有直接或关键间接联系的人物，线不代表全部剧情，只代表这段关系在他生命里的重量。15 份档案中 7 位以 3D 重建、8 位保留原剧影像；台词音频为 AI 合成，并非演员原声。",
@@ -503,12 +504,13 @@ window.WALTER_DATA = {
       heroKicker: "File BB-2008 · Albuquerque, New Mexico",
       heroTitle: "Walter White",
       heroSubCn: "The relationship file",
-      heroLead: "One name, five lives. From high-school chemistry teacher to a cook in the desert, to Heisenberg dragging a whole family down with him — he didn't turn bad overnight. He talked himself into it.",
+      heroLead: "Two names, five lives. From high-school chemistry teacher to a cook in the desert, to Heisenberg dragging a whole family down with him — he didn't turn bad overnight. He talked himself into it.",
       boardTitle: "Who defines Walter White",
       boardLead: "Select a card to trace the line back to Walt: red is love, dark red is debt, cold grey is the law. 3D files rotate by drag and zoom by scroll or pinch; still files are on-screen photographs; every file has a playable line.",
       legendEscape: "Escape",
       relationLabel: "Relation to Walter",
-      timelineTitle: "Five lives, one name",
+      timelineTitle: "Five lives, two names",
+      timelineLead: "Walter White was the high-school teacher who fixed his own water heater after thirty years in a classroom. Heisenberg was the second identity he issued himself. These five stages are the story of the first one giving way to the second.",
       aboutTitle: "About this file",
       aboutP1: "An unofficial fan project about Walter White from Breaking Bad. Characters, storylines and dialogue belong to AMC / Sony Pictures Television and the creators.",
       aboutP2: "The network includes only figures with a direct or decisive connection to Walt. A line is not the whole plot — it is the weight that relationship carried in his life. Seven of the fifteen files are 3D reconstructions, eight keep on-screen stills; the voice tracks are synthesized, not the actors' own.",
