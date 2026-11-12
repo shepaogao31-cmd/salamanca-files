@@ -15,7 +15,7 @@
     if (cache[id] && cache[id].queue) { cache[id].queue.push(cb); return; }
     cache[id] = { queue: [cb] };
     var s = document.createElement("script");
-    s.src = "assets/models/" + id + ".js?v=20261112a";
+    s.src = "assets/models/" + id + ".js?v=20261112b";
     s.async = true;
 
     var settled = false;

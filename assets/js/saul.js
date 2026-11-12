@@ -761,12 +761,8 @@
       b.addEventListener("click", function () { applyLanguage(b.getAttribute("data-lang-btn")); });
     });
 
-    buildFilters();
-    buildBoard();
-    buildTimeline();
-    buildIndex();
-    applyFilter("all");
-    requestAnimationFrame(centerBoard);
+    /* 首屏就按当前语言渲染，否则数据文件里的页面级文案不会生效 */
+    applyLanguage(state.lang);
 
     document.querySelectorAll("#dossier [data-close]").forEach(function (b) {
       b.addEventListener("click", closeDossier);
@@ -799,7 +795,6 @@
         b.setAttribute("aria-pressed", "true");
       }
     });
-    if (state.lang === "en") applyLanguage("en");
   }
 
   if (document.readyState === "loading") {
