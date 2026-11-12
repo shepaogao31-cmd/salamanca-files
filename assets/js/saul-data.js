@@ -296,7 +296,7 @@ window.SAUL_DATA = {
       x: 782, y: 690
     },
     {
-      id: "walter", group: "meth", initials: "WW", media: "image",
+      id: "walter", group: "meth", initials: "WW", media: "3d",
       name: { zh: "沃尔特·怀特", en: "Walter White" },
       alias: { zh: "海森堡 / Mr. White", en: "Heisenberg / Mr. White" },
       role: { zh: "化学教师 · 制毒师", en: "Chemistry teacher · meth cook" },
@@ -321,7 +321,7 @@ window.SAUL_DATA = {
       x: 452, y: 652
     },
     {
-      id: "jesse", group: "meth", initials: "JP", media: "image",
+      id: "jesse", group: "meth", initials: "JP", media: "3d",
       name: { zh: "杰西·平克曼", en: "Jesse Pinkman" },
       alias: { zh: "Jesse / Cap'n Cook", en: "Jesse / Cap'n Cook" },
       role: { zh: "制毒师 · 搭档", en: "Cook · partner" },
@@ -346,7 +346,7 @@ window.SAUL_DATA = {
       x: 292, y: 704
     },
     {
-      id: "hank", group: "meth", initials: "HS", media: "image",
+      id: "hank", group: "meth", initials: "HS", media: "3d",
       name: { zh: "汉克·施雷德", en: "Hank Schrader" },
       alias: { zh: "ASAC Schrader / DEA", en: "ASAC Schrader / DEA" },
       role: { zh: "缉毒局探员", en: "DEA agent" },
