@@ -6,12 +6,21 @@ Two interlinked character archives for *Better Call Saul* / *Breaking Bad*. Stat
 
 ---
 
+## 在线访问 / Live demo
+
+直接点开，无需下载：
+
+- **[萨拉曼卡档案 · Salamanca Files ↗](https://shepaogao31-cmd.github.io/salamanca-files/)**
+- **[索尔关系网 · The McGill Network ↗](https://shepaogao31-cmd.github.io/salamanca-files/saul.html)**
+
+> 由 GitHub Pages 托管。若网络打不开，可下载本仓库后双击 `index.html` 本地打开，效果完全一致（3D 与音频都能离线运行）。
+
 ## 页面 / Pages
 
-| 入口 | 内容 |
-| --- | --- |
-| `index.html` | **Salamanca Files** — 萨拉曼卡家族六位角色：赫克托、屠库、拉罗、马可、莱昂内、萨拉曼卡奶奶。含家族关系图、3D 半身像、结局剧透折叠。 |
-| `saul.html` | **The McGill Network** — 以索尔为中心的人物关系网：15 位人物、27 条关系、阵营筛选、时间线、台词音频。 |
+| 入口 | 在线打开 | 内容 |
+| --- | --- | --- |
+| `index.html` | [打开 ↗](https://shepaogao31-cmd.github.io/salamanca-files/) | **Salamanca Files** — 萨拉曼卡家族六位角色：赫克托、屠库、拉罗、马可、莱昂内、萨拉曼卡奶奶。含家族关系图、3D 半身像、结局剧透折叠。 |
+| `saul.html` | [打开 ↗](https://shepaogao31-cmd.github.io/salamanca-files/saul.html) | **The McGill Network** — 以索尔为中心的人物关系网：15 位人物、27 条关系、阵营筛选、时间线、台词音频。 |
 
 两页导航互链，语言选择会记住。
 
