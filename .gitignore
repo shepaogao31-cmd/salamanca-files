@@ -13,3 +13,6 @@ node_modules/
 
 # local workspace data
 .workbuddy/
+
+# WorkBuddy app marker
+*.genie
