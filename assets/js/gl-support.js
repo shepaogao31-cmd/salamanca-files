@@ -349,7 +349,7 @@
     box.appendChild(note);
 
     var id = document.getElementById("dossier") ? "saul" : "hector";
-    var url = new URL("assets/models/" + id + ".js?v=20261112b", document.location.href).href;
+    var url = new URL("assets/models/" + id + ".js?v=20261112c", document.location.href).href;
     var t0 = (window.performance && performance.now) ? performance.now() : Date.now();
     if (btn) btn.disabled = true;
 
@@ -379,7 +379,7 @@
     }, 20000);
 
     var script = document.createElement("script");
-    script.src = "assets/models/" + id + ".js?v=20261112b";
+    script.src = "assets/models/" + id + ".js?v=20261112c";
     script.async = true;
 
     script.onerror = function () {

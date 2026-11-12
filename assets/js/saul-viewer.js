@@ -15,7 +15,7 @@
     if (cache[id] && cache[id].queue) { cache[id].queue.push(cb); return; }
     cache[id] = { queue: [cb] };
     var s = document.createElement("script");
-    s.src = "assets/models/" + id + ".js?v=20261112b";
+    s.src = "assets/models/" + id + ".js?v=20261112c";
     s.async = true;
 
     var settled = false;
@@ -206,7 +206,9 @@
     var running = false;
     var raf = null;
     var dragging = false;
-    var lastX = 0, lastY = 0;
+    var lastT = 0;
+    var dragX = 0, dragY = 0, dragId = null;
+    var activePointers = {};
     var yaw = 0, pitch = 0, vel = 0;
     var auto = true;
     var zoom = 1;
@@ -333,9 +335,9 @@
     function loop(t) {
       if (!running) return;
       raf = requestAnimationFrame(loop);
-      if (!lastX) lastX = t;
-      var dt = Math.min(0.05, (t - lastX) / 1000);
-      lastX = t;
+      if (!lastT) lastT = t;
+      var dt = Math.min(0.05, (t - lastT) / 1000);
+      lastT = t;
       if (auto && !dragging) yaw += dt * 0.28;
       if (!dragging) {
         vel *= 0.94;
@@ -347,7 +349,7 @@
     function start() {
       if (running) return;
       running = true;
-      lastX = 0;
+      lastT = 0;
       raf = requestAnimationFrame(loop);
     }
 
@@ -371,31 +373,53 @@
     el.style.touchAction = "none";
 
     el.addEventListener("pointerdown", function (e) {
+      if (e.pointerType === "mouse" && e.button !== 0) return;
+      activePointers[e.pointerId] = true;
+      /* 双指捏合交给 touch 事件处理，此时不允许再叠加旋转 */
+      if (Object.keys(activePointers).length > 1) {
+        dragging = false;
+        dragId = null;
+        el.classList.remove("is-grabbing");
+        return;
+      }
       dragging = true;
+      dragId = e.pointerId;
       vel = 0;
-      lastX = e.clientX;
-      lastY = e.clientY;
+      dragX = e.clientX;
+      dragY = e.clientY;
       el.setPointerCapture && el.setPointerCapture(e.pointerId);
       el.classList.add("is-grabbing");
     });
+
     el.addEventListener("pointermove", function (e) {
-      if (!dragging) return;
-      var dx = e.clientX - lastX;
-      var dy = e.clientY - lastY;
-      lastX = e.clientX;
-      lastY = e.clientY;
+      if (!dragging || e.pointerId !== dragId) return;
+      var dx = e.clientX - dragX;
+      var dy = e.clientY - dragY;
+      dragX = e.clientX;
+      dragY = e.clientY;
       yaw += dx * 0.008;
       pitch = Math.max(-0.2, Math.min(0.2, pitch + dy * 0.0025));
-      vel = dx * 0.0012;
+      vel = Math.max(-0.06, Math.min(0.06, dx * 0.0012));
     });
-    function endDrag() { dragging = false; el.classList.remove("is-grabbing"); }
+
+    function endDrag(e) {
+      if (e && e.pointerId !== undefined) {
+        delete activePointers[e.pointerId];
+        if (dragId !== null && e.pointerId !== dragId) return;
+      }
+      dragging = false;
+      dragId = null;
+      el.classList.remove("is-grabbing");
+    }
     el.addEventListener("pointerup", endDrag);
     el.addEventListener("pointercancel", endDrag);
-    el.addEventListener("pointerleave", endDrag);
+    el.addEventListener("lostpointercapture", endDrag);
 
     el.addEventListener("wheel", function (e) {
       e.preventDefault();
-      zoom = Math.max(0.72, Math.min(1.9, zoom * (e.deltaY > 0 ? 0.94 : 1.06)));
+      var raw = e.deltaMode === 1 ? e.deltaY * 16 : e.deltaY;
+      var d = Math.max(-120, Math.min(120, raw));
+      zoom = Math.max(0.72, Math.min(1.9, zoom * Math.exp(-d * 0.0012)));
       render();
     }, { passive: false });
 

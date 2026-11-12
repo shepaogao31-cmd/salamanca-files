@@ -125,7 +125,7 @@
     pendingLoads[source] = [{ ok: onReady, err: onError }];
 
     var script = document.createElement("script");
-    script.src = "assets/models/" + source + ".js?v=20261112b";
+    script.src = "assets/models/" + source + ".js?v=20261112c";
     script.async = true;
     script.setAttribute("data-model-source", source);
 
