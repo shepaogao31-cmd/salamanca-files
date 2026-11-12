@@ -68,7 +68,8 @@ Fan-made, unofficial, not affiliated with AMC or Sony Pictures Television. Chara
 
 ## 作者 / Author
 
-- GitHub：[@gaosh](https://github.com/gaosh)
+- GitHub：[@shepaogao31-cmd](https://github.com/shepaogao31-cmd)（高射炮）
+- 仓库：[salamanca-files](https://github.com/shepaogao31-cmd/salamanca-files)
 
 ## License
 

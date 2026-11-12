@@ -7,10 +7,10 @@
   "use strict";
 
   var META = {
-    handle: "gaosh",                            // GitHub 用户名
+    handle: "shepaogao31-cmd",                    // GitHub 用户名
     name: "",                                   // 可选：中文署名，留空则显示 @handle
-    url: "https://github.com/gaosh",            // 个人主页
-    repo: "https://github.com/gaosh/salamanca-files",
+    url: "https://github.com/shepaogao31-cmd",      // 个人主页
+    repo: "https://github.com/shepaogao31-cmd/salamanca-files",
     repoLabel: "salamanca-files"
   };
 
